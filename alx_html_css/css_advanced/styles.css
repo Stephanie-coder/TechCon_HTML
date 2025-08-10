@@ -9,62 +9,97 @@ body {
 /* === Header === */
 .header {
   background-color: #fff;
-  padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px; /* Figma: 80px header height */
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 1103px; /* Figma: 1103px container width */
+  max-width: 1103px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px; 
 }
 
 .logo img {
-  height: 40px;
+  width: 167px; /* Figma: 167px logo width */
+  height: 29px; /* Figma: 29px logo height */
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 43px; /* Figma: 43px gap between nav items */
   margin: 0;
   padding: 0;
 }
 
 .nav a {
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
+  color: #071629; /* Figma: dark blue color */
+  font-family: 'Source Sans Pro',Arial, sans-serif;
+  font-weight: 12px; 
+  letter-spacing: 0.5px; 
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #C271FF; /* Figma: purple color on hover */
 }
 
 /* === Hero Section === */
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  background-color: #f5f5f5;
+  padding: 0;
+  background: radial-gradient(ellipse at center, rgba(7,22,41,0.2) 0%, rgba(7,22,41,0.85) 70%, rgba(7,22,41,0.98) 100%), url('assets/CSS Advanced/Object.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 120px; /* Figma: 120px */
+  font-weight: 700;
+  line-height: 151px;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .hero p {
-  font-size: 24px;
-  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 40px
 }
 
 .hero button {
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 15px 60px;
+  font-size: 14px;
   background-color: #C271FF;
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 22px;
+  font-weight: 600;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  transition: background 0.2s;
+}
+.hero button:hover {
+  background: #a850e6;
 }
 
 /* === Pros Section === */
@@ -74,7 +109,10 @@ body {
 }
 
 .pros h2 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 32px;
+  font-weight: 700;
+  color: #C271FF;
   margin-bottom: 40px;
 }
 
@@ -85,12 +123,18 @@ body {
 .pros-list {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 80px; /* Figma spacing between cards */
   flex-wrap: wrap;
+  margin-top: 80px;
 }
 
 .pro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 200px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -98,17 +142,21 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .pro h3 {
   margin: 10px 0 5px;
   font-size: 18px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .pro p {
   margin: 2px 0;
   font-size: 14px;
-  color: #555;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* === Quote Section === */
@@ -152,3 +200,303 @@ body {
   font-size: 14px;
 }
 
+/* === Tutorials Section === */
+.tutorials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tutorials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.tutorials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.tutorial-card {
+  width: 250px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tutorial-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.tutorial-text {
+  padding: 15px;
+}
+
+
+.tutorial-text h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.tutorial-text p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.tutorial-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.author-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tutorial-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.stars img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.duration {
+  font-size: 14px;
+  color: #C271FF;
+  font-weight: bold;
+}
+.stars {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: start;
+}
+
+.stars img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.tutorial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.play-icon img {
+  width: 60px; /* adjust to match Figma size */
+  height: 60px;
+  border-radius: 50%;
+}
+.thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.play-icon img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.9;
+}
+
+.membership {
+  padding: 5px 160px;
+  text-align: center;
+  background-color: #071629;
+  color: white;
+}
+
+.membership h2 {
+  font-size: 32px;
+  margin-bottom: 64px;
+}
+
+.membership-cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.membership-card {
+  max-width: 200px;
+  text-align: center;
+}
+
+.membership-card img {
+  width: 43px;
+  height: 35px;
+  margin-bottom: 24px;
+}
+
+.membership-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.membership-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.membership-button:hover {
+  background-color: #a850e6;
+}
+.membership-btn-wrapper {
+  text-align: center;
+  margin-top: 100px; /* move button up */
+}
+
+.membership-button {
+  padding: 15px 30px;
+  background-color: #c271ff;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.faq {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #071629;
+  margin-bottom: 50px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #071629;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #071629;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #071629;
+  color: #ffffff;
+  padding: 60px 20px 30px;
+  clear: both;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;  /* changed from wrap to nowrap */
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: center;
+  gap: 10px;
+  align-items: row;
+}
+
+.footer-left img {
+  width: 200px;
+}
+
+.footer-center p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.footer-right {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-right img {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-right img:hover {
+  transform: scale(1.1);
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
